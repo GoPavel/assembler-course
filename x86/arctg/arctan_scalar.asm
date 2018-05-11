@@ -5,7 +5,7 @@ zero:   dd 0.0
 one:    dd 1.0
 two:    dd 2.0
         section         .bss
-buf     resb 4
+buf:     resb 4
 
         section         .text
 arctan_scalar:
@@ -16,7 +16,7 @@ arctan_scalar:
         movss           xmm1, [one]        ; xmm1 -> 1
         movss           xmm3, xmm2        ; xmm3 -> x
 
-        movss           xmm2, xmm2        ; xmm2 -> -x^2
+        mulss           xmm2, xmm2        ; xmm2 -> -x^2
         movss           xmm4, [zero]
         subss           xmm4, xmm2
         movss           xmm2, xmm4

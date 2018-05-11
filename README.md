@@ -4,7 +4,8 @@
 ```c
 float __cdecl arctan(float x, uint k);
 ```
-- `arctg_mod`
+- `arctg_scalar` -- скалярная версия на xmm
+- 'arctg_vector' -- векторная версия на xmm
 
 # Big tasks
 

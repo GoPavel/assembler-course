@@ -18,7 +18,7 @@ main:
         mov             eax, [f]
         push            eax
         push            format_printf_float
-        call            printf
+        call            printf ;; auto conert float to double
         add             esp, 8 ; cкинуть формат + число = 4 + 4 = 12
         ret
 
