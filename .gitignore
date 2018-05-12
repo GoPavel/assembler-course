@@ -1,9 +1,12 @@
 *.o
-Makefile/
+Makefile
 CMakeCache.txt
 cmake_install.cmake
 *.out
-*/CMakeFiles/*
+**/CMakeFiles/*
 *.user
 *build-*
 *.cbp
+arctan_vector
+arctan_scalar
+arctan

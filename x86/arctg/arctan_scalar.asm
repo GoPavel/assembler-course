@@ -1,10 +1,14 @@
         global          arctan_scalar ; cdecl
 
         section         .rdata
+align 32
 zero:   dd 0.0
+align 32
 one:    dd 1.0
+align 32
 two:    dd 2.0
         section         .bss
+align 32
 buf:     resb 4
 
         section         .text
