@@ -35,7 +35,7 @@ void print(char *out_buf, const char *format, const char *hex_number);
     printf("%<format>i", x);
 ```
 
-Мир: x64
+Мир: x86
 
 ## Task 2
 
