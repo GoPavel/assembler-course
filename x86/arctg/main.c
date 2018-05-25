@@ -14,4 +14,5 @@ int main() {
     // printf("%f\n", arctan(arg, k));
     printf("scalar: %f\n", arctan_scalar(arg, k));
     printf("vector: %f\n", arctan_vector(arg, k));
+
 }
