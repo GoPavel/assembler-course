@@ -182,8 +182,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="2"
-     inkscape:cx="196.65928"
-     inkscape:cy="13.690404"
+     inkscape:cx="297.65928"
+     inkscape:cy="213.6904"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -331,7 +331,7 @@
          id="tspan7391"
          x="37.150463"
          y="11.689779"
-         style="stroke-width:0.26458332">CPO.PE=1</tspan><tspan
+         style="stroke-width:0.26458332">CP0.PE=1</tspan><tspan
          sodipodi:role="line"
          x="37.150463"
          y="17.86339"
@@ -347,7 +347,7 @@
          id="tspan7397"
          x="39.689522"
          y="28.126854"
-         style="stroke-width:0.26458332">CPO.PE=0</tspan></text>
+         style="stroke-width:0.26458332">CP0.PE=0</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:4.23333311px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
@@ -419,7 +419,7 @@
        rx="53.58754"
        ry="20.646572" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker4760)"
+       style="fill:none;stroke:#000000;stroke-width:0.26499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker4760)"
        d="m 53.988443,63.540068 c 0,0 8.68626,6.147196 13.363477,3.741772 4.677217,-2.405425 9.087164,-7.750816 9.087164,-7.750816"
        id="path7462"
        inkscape:connector-curvature="0" />
@@ -548,7 +548,7 @@
          x="147.37291"
          y="23.685415"
          style="stroke-width:0.26458332"
-         id="tspan7766">CPO.PG=1</tspan></text>
+         id="tspan7766">CP0.PG=1</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:4.23333311px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
@@ -559,7 +559,7 @@
          id="tspan7768"
          x="148.43124"
          y="34.533333"
-         style="stroke-width:0.26458332">CPO.PG=0</tspan><tspan
+         style="stroke-width:0.26458332">CP0.PG=0</tspan><tspan
          sodipodi:role="line"
          x="148.43124"
          y="39.825001"
