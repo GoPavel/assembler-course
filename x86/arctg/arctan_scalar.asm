@@ -14,27 +14,25 @@ buf:     resb 4
         section         .text
 arctan_scalar:
         mov             eax, [esp + 8] ; k
-        movss           xmm2, [esp + 4] ; arg
 
-        movss           xmm0, [zero]       ; xmm0 -> 0
-        movss           xmm1, [one]        ; xmm1 -> 1
-        movss           xmm3, xmm2        ; xmm3 -> x
-
-        mulss           xmm2, xmm2        ; xmm2 -> -x^2
-        movss           xmm4, [zero]
-        subss           xmm4, xmm2
-        movss           xmm2, xmm4
+        movss           xmm0, [zero]       ; xmm0 -> 0 (sum)
+        movss           xmm1, [one]        ; xmm1 -> 1 (div)
+        movss           xmm2, [two]        ; xmm2 -> 2 (div's step)
+        movss           xmm3, [esp + 4]    ; xmm3 -> x (pow)
+        movss           xmm5, xmm3         ; xmm4 -> -x^2 (pow's step)
+        mulss           xmm5, xmm5
+        movss           xmm4, xmm0
+        subss           xmm4, xmm5
 
         cmp             eax, 0
         jz              L2
 L1:
-        movss           xmm4, xmm3 ; xmm0 += xmm3 / xmm1
-        divss           xmm4, xmm1
-        addss           xmm0, xmm4
+        movss           xmm5, xmm3 ; xmm0 += xmm3 / xmm1
+        divss           xmm5, xmm1
+        addss           xmm0, xmm5
 
-        movss           xmm4, [two]
-        addss           xmm1, xmm4
-        mulss           xmm3, xmm2
+        addss           xmm1, xmm2
+        mulss           xmm3, xmm4
 
         dec             eax
         cmp             eax, 0
