@@ -795,7 +795,7 @@ mov al, [ebx + ebp*1] ; хороший компилятор (not nasm) позв�
 
 ## Картинка переключения режимов
 
-![](/media/gopavel/DATA/assembler-course/images/drawing.svg)
+![](images/drawing.svg)
 
 - `EFER.LME` - long mode enable
 - `CR4.PAE` - включить pae-расширение страничной адресации
