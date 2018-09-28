@@ -33,7 +33,7 @@ NB) x86 - reg-mem2, cisc
 ### Полезные ссылки
 
 www.agner.org - можно найти информацию о производительности на разных архитектурах.
-www.aida64russia.com - инструмент для тестирования производительности.
+www.aida64russia.com - инструмент для тестирования производительности.  
 [справка по командам](https://www.felixcloutier.com/x86/)
 
 ## Обзор регистров
@@ -62,7 +62,7 @@ ax = ah:al (только для *x)
 
 `EFLAGS` - регистр, которые содержит различные флаги.
 - `ZF` (zero flag) -- нулевой результат вычисления
-- `CF` (carry flag) -- переполнение результата
+- `CF` (carry flag) -- знаковое переполнение результата
 - `SF` (sign flag) -- знак результата
 - `DF` (direction flag) -- нужен для особых команд
 
@@ -81,7 +81,7 @@ mov [eax + ebx * 4], ebx
 
 - `[base_register32 + index_register32 * scale_factor + offset32]`
     - base_register32 = general proposal 32-bit register
-    - index_register32 = gp 32-bit without `esp`
+    - index_register32 = general proposal 32-bit without `esp`
     - scale_factor = {1, 2, 4, 8}
 - `[base_register16 + index_register16 + offset16]`
     - base_register16 = {bx, bp}
@@ -94,6 +94,7 @@ mov [eax + ebx * 4], ebx
 Также иногда необходимо указать размер пересылаемых данных [byte, word, dword]:
 ```asm
 mov dword, [eax], 5
+mov [eax], dword 5
 ```
 
 #### другие
@@ -146,8 +147,8 @@ mov dword, [eax], 5
 - `shld/shrd` -- сдвиги двойной точности. (Можно делить пару)
   - `shld reg1 reg2, const` -- сдвиг, но потерянные биты беруться из reg2
 - `ror/rol` -- циклический сдвиг
-- `rcr` -- циклический сдвиг следующей штуки: (..<-[cf]<-[31..0]<-..)
-- `rcl` -- циклические сдвиг следующей штуки: (..->[31..0]->[cf]->..)
+- `rcl` -- циклический сдвиг следующей штуки: (..<-[31..0]<-[cf]<-..)
+- `rcr` -- циклические сдвиг следующей штуки: (..->[31..0]->[cf]->..)
 
 ### другое
 
@@ -210,7 +211,7 @@ do ... while(eax != 0);
 ```asm
 L1:
   ...
-  test  eax
+  test  eax, eax
   jnz   L1
 ```
 
@@ -253,7 +254,7 @@ L3:
 LE:
 ...
     section  rdata
-    table  dd LE, L1, LE, L2, L2, L3
+    table  dd LE, L1, LE, L2, L2, LE, L3
 ```
 
 ### Умножение на 10
